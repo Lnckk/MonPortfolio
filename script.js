@@ -1,9 +1,9 @@
-/*=============== SHOW MENU ===============*/
+/* SHOW MENU */
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
 
-/*===== MENU SHOW =====*/
+/* MENU SHOW */
 /* Validate if constant exists */
 if (navToggle) {
     navToggle.addEventListener('click', () => {
@@ -11,15 +11,15 @@ if (navToggle) {
     })
 }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
+/* MENU HIDDEN */
+// Validate if constant exists
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
     })
 }
 
-/*=============== REMOVE MENU MOBILE ===============*/
+/* REMOVE MENU MOBILE */
 const navLink = document.querySelectorAll('.nav__link')
 
 const linkAction = () => {
@@ -29,7 +29,7 @@ const linkAction = () => {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*=============== SWIPER PROJECTS ===============*/
+/* SWIPER PROJECTS */
 let swiperProjects = new Swiper(".projects__container", {
     loop: true,
     spaceBetween: 24,
@@ -49,7 +49,7 @@ let swiperProjects = new Swiper(".projects__container", {
     },
 });
 
-/*=============== SWIPER TESTIMONIAL ===============*/
+/* SWIPER TESTIMONIAL */
 let swiperTestimonial = new Swiper(".testimonial__container", {
     grabCursor: true,
 
@@ -59,7 +59,7 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
     },
 });
 
-/*=============== EMAIL JS ===============*/
+/* EMAIL JS */
 const contactForm = document.getElementById('contact-form'),
     contactName = document.getElementById('contact-name'),
     contactEmail = document.getElementById('contact-email'),
@@ -101,7 +101,7 @@ const sendEmail = (e) => {
 }
 contactForm.addEventListener('submit', sendEmail)
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+/* SCROLL SECTIONS ACTIVE LINK */
 const sections = document.querySelectorAll('section[id]')
 
 const scrollActive = () => {
@@ -122,7 +122,7 @@ const scrollActive = () => {
 }
 window.addEventListener('scroll', scrollActive)
 
-/*=============== SHOW SCROLL UP ===============*/
+/* SHOW SCROLL UP */
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up')
     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
@@ -131,7 +131,7 @@ const scrollUp = () => {
 }
 window.addEventListener('scroll', scrollUp)
 
-/*=============== DARK LIGHT THEME ===============*/
+/* DARK LIGHT THEME */
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
@@ -161,7 +161,7 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
+/* CHANGE BACKGROUND HEADER */
 const scrollHeader = () => {
     const header = document.getElementById('header')
     // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
@@ -170,7 +170,7 @@ const scrollHeader = () => {
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+/* SCROLL REVEAL ANIMATION */
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
